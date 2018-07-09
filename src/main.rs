@@ -22,7 +22,7 @@ impl Geometry for Square {
     }
 }
 
-fn new_geo(shape: &str) -> impl Geometry {
+fn new_geo(shape: &str) -> Box<Geometry> {
     match shape {
         "square" => Square::new(),
         "circle" => Circle::new(),
